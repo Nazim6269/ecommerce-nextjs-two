@@ -1,4 +1,14 @@
-const ProductList = () => {
+import Link from "next/link";
+
+const ProductList = async ({
+  catgoryId,
+  limit,
+  searchParams,
+}: {
+  categoryId: string;
+  limit?: number;
+  searechParams?: any;
+}) => {
   return (
     <section className="bg-gray-50 py-8 antialiased dark:bg-gray-900 md:py-12">
       <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
@@ -235,7 +245,10 @@ const ProductList = () => {
         <div className="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4">
           <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
             <div className="h-56 w-full">
-              <a href="#">
+              <Link
+                aria-label="product details"
+                href="productList/product/imac/2"
+              >
                 <img
                   className="mx-auto h-full dark:hidden"
                   src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front.svg"
@@ -246,7 +259,7 @@ const ProductList = () => {
                   src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front-dark.svg"
                   alt=""
                 />
-              </a>
+              </Link>
             </div>
             <div className="pt-6">
               <div className="mb-4 flex items-center justify-between gap-4">

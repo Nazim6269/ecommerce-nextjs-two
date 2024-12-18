@@ -20,9 +20,9 @@ const AccountOverview = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"
                   />
                 </svg>
@@ -42,9 +42,9 @@ const AccountOverview = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="m9 5 7 7-7 7"
                   />
                 </svg>
@@ -69,9 +69,9 @@ const AccountOverview = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="m9 5 7 7-7 7"
                   />
                 </svg>
@@ -98,9 +98,9 @@ const AccountOverview = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
               />
             </svg>
@@ -119,9 +119,9 @@ const AccountOverview = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M12 6v13m0-13 4 4m-4-4-4 4"
                   ></path>
                 </svg>
@@ -140,9 +140,9 @@ const AccountOverview = () => {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
@@ -161,7 +161,7 @@ const AccountOverview = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-width="2"
+                strokeWidth="2"
                 d="M11.083 5.104c.35-.8 1.485-.8 1.834 0l1.752 4.022a1 1 0 0 0 .84.597l4.463.342c.9.069 1.255 1.2.556 1.771l-3.33 2.723a1 1 0 0 0-.337 1.016l1.03 4.119c.214.858-.71 1.552-1.474 1.106l-3.913-2.281a1 1 0 0 0-1.008 0L7.583 20.8c-.764.446-1.688-.248-1.474-1.106l1.03-4.119A1 1 0 0 0 6.8 14.56l-3.33-2.723c-.698-.571-.342-1.702.557-1.771l4.462-.342a1 1 0 0 0 .84-.597l1.753-4.022Z"
               />
             </svg>
@@ -180,9 +180,9 @@ const AccountOverview = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M12 6v13m0-13 4 4m-4-4-4 4"
                   ></path>
                 </svg>
@@ -201,9 +201,9 @@ const AccountOverview = () => {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
@@ -222,9 +222,9 @@ const AccountOverview = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"
               />
             </svg>
@@ -243,9 +243,9 @@ const AccountOverview = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M12 6v13m0-13 4 4m-4-4-4 4"
                   ></path>
                 </svg>
@@ -264,9 +264,9 @@ const AccountOverview = () => {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
@@ -285,9 +285,9 @@ const AccountOverview = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M3 9h13a5 5 0 0 1 0 10H7M3 9l4-4M3 9l4 4"
               />
             </svg>
@@ -306,9 +306,9 @@ const AccountOverview = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M12 6v13m0-13 4 4m-4-4-4 4"
                   ></path>
                 </svg>
@@ -327,9 +327,9 @@ const AccountOverview = () => {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
@@ -380,9 +380,9 @@ const AccountOverview = () => {
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"
                     />
                   </svg>
@@ -405,9 +405,9 @@ const AccountOverview = () => {
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M13 7h6l2 4m-8-4v8m0-8V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v9h2m8 0H9m4 0h2m4 0h2v-4m0 0h-5m3.5 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"
                     />
                   </svg>
@@ -440,9 +440,9 @@ const AccountOverview = () => {
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M6 12c.263 0 .524-.06.767-.175a2 2 0 0 0 .65-.491c.186-.21.333-.46.433-.734.1-.274.15-.568.15-.864a2.4 2.4 0 0 0 .586 1.591c.375.422.884.659 1.414.659.53 0 1.04-.237 1.414-.659A2.4 2.4 0 0 0 12 9.736a2.4 2.4 0 0 0 .586 1.591c.375.422.884.659 1.414.659.53 0 1.04-.237 1.414-.659A2.4 2.4 0 0 0 16 9.736c0 .295.052.588.152.861s.248.521.434.73a2 2 0 0 0 .649.488 1.809 1.809 0 0 0 1.53 0 2.03 2.03 0 0 0 .65-.488c.185-.209.332-.457.433-.73.1-.273.152-.566.152-.861 0-.974-1.108-3.85-1.618-5.121A.983.983 0 0 0 17.466 4H6.456a.986.986 0 0 0-.93.645C5.045 5.962 4 8.905 4 9.736c.023.59.241 1.148.611 1.567.37.418.865.667 1.389.697Zm0 0c.328 0 .651-.091.94-.266A2.1 2.1 0 0 0 7.66 11h.681a2.1 2.1 0 0 0 .718.734c.29.175.613.266.942.266.328 0 .651-.091.94-.266.29-.174.537-.427.719-.734h.681a2.1 2.1 0 0 0 .719.734c.289.175.612.266.94.266.329 0 .652-.091.942-.266.29-.174.536-.427.718-.734h.681c.183.307.43.56.719.734.29.174.613.266.941.266a1.819 1.819 0 0 0 1.06-.351M6 12a1.766 1.766 0 0 1-1.163-.476M5 12v7a1 1 0 0 0 1 1h2v-5h3v5h7a1 1 0 0 0 1-1v-7m-5 3v2h2v-2h-2Z"
                     />
                   </svg>
@@ -505,9 +505,9 @@ const AccountOverview = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"
               ></path>
             </svg>
@@ -564,9 +564,9 @@ const AccountOverview = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M13 7h6l2 4m-8-4v8m0-8V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v9h2m8 0H9m4 0h2m4 0h2v-4m0 0h-5m3.5 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"
                   ></path>
                 </svg>
@@ -593,9 +593,9 @@ const AccountOverview = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="m19 9-7 7-7-7"
                   ></path>
                 </svg>
@@ -627,9 +627,9 @@ const AccountOverview = () => {
                       >
                         <path
                           stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M17.651 7.65a7.131 7.131 0 0 0-12.68 3.15M18.001 4v4h-4m-7.652 8.35a7.13 7.13 0 0 0 12.68-3.15M6 20v-4h4"
                         ></path>
                       </svg>
@@ -652,12 +652,12 @@ const AccountOverview = () => {
                       >
                         <path
                           stroke="currentColor"
-                          stroke-width="2"
+                          strokeWidth="2"
                           d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"
                         ></path>
                         <path
                           stroke="currentColor"
-                          stroke-width="2"
+                          strokeWidth="2"
                           d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
                         ></path>
                       </svg>
@@ -682,9 +682,9 @@ const AccountOverview = () => {
                       >
                         <path
                           stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"
                         ></path>
                       </svg>
@@ -741,9 +741,9 @@ const AccountOverview = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M6 18 17.94 6M18 18 6.06 6"
                   ></path>
                 </svg>
@@ -770,9 +770,9 @@ const AccountOverview = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="m19 9-7 7-7-7"
                   ></path>
                 </svg>
@@ -804,9 +804,9 @@ const AccountOverview = () => {
                       >
                         <path
                           stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M17.651 7.65a7.131 7.131 0 0 0-12.68 3.15M18.001 4v4h-4m-7.652 8.35a7.13 7.13 0 0 0 12.68-3.15M6 20v-4h4"
                         ></path>
                       </svg>
@@ -829,12 +829,12 @@ const AccountOverview = () => {
                       >
                         <path
                           stroke="currentColor"
-                          stroke-width="2"
+                          strokeWidth="2"
                           d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"
                         ></path>
                         <path
                           stroke="currentColor"
-                          stroke-width="2"
+                          strokeWidth="2"
                           d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
                         ></path>
                       </svg>
@@ -891,9 +891,9 @@ const AccountOverview = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M5 11.917 9.724 16.5 19 7.5"
                   ></path>
                 </svg>
@@ -920,9 +920,9 @@ const AccountOverview = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="m19 9-7 7-7-7"
                   ></path>
                 </svg>
@@ -954,9 +954,9 @@ const AccountOverview = () => {
                       >
                         <path
                           stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M17.651 7.65a7.131 7.131 0 0 0-12.68 3.15M18.001 4v4h-4m-7.652 8.35a7.13 7.13 0 0 0 12.68-3.15M6 20v-4h4"
                         ></path>
                       </svg>
@@ -979,12 +979,12 @@ const AccountOverview = () => {
                       >
                         <path
                           stroke="currentColor"
-                          stroke-width="2"
+                          strokeWidth="2"
                           d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"
                         ></path>
                         <path
                           stroke="currentColor"
-                          stroke-width="2"
+                          strokeWidth="2"
                           d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
                         ></path>
                       </svg>
@@ -1041,9 +1041,9 @@ const AccountOverview = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M5 11.917 9.724 16.5 19 7.5"
                   ></path>
                 </svg>
@@ -1070,9 +1070,9 @@ const AccountOverview = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="m19 9-7 7-7-7"
                   ></path>
                 </svg>
@@ -1104,9 +1104,9 @@ const AccountOverview = () => {
                       >
                         <path
                           stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M17.651 7.65a7.131 7.131 0 0 0-12.68 3.15M18.001 4v4h-4m-7.652 8.35a7.13 7.13 0 0 0 12.68-3.15M6 20v-4h4"
                         ></path>
                       </svg>
@@ -1129,12 +1129,12 @@ const AccountOverview = () => {
                       >
                         <path
                           stroke="currentColor"
-                          stroke-width="2"
+                          strokeWidth="2"
                           d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"
                         ></path>
                         <path
                           stroke="currentColor"
-                          stroke-width="2"
+                          strokeWidth="2"
                           d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
                         ></path>
                       </svg>
@@ -1176,9 +1176,9 @@ const AccountOverview = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
                   />
                 </svg>
@@ -1287,17 +1287,17 @@ const AccountOverview = () => {
                         <g mask="url(#a)">
                           <path
                             fill="#D02F44"
-                            fill-rule="evenodd"
+                            fillRule="evenodd"
                             d="M19.6.5H0v.933h19.6V.5zm0 1.867H0V3.3h19.6v-.933zM0 4.233h19.6v.934H0v-.934zM19.6 6.1H0v.933h19.6V6.1zM0 7.967h19.6V8.9H0v-.933zm19.6 1.866H0v.934h19.6v-.934zM0 11.7h19.6v.933H0V11.7zm19.6 1.867H0v.933h19.6v-.933z"
-                            clip-rule="evenodd"
+                            clipRule="evenodd"
                           />
                           <path fill="#46467F" d="M0 .5h8.4v6.533H0z" />
                           <g filter="url(#filter0_d_343_121520)">
                             <path
                               fill="url(#paint0_linear_343_121520)"
-                              fill-rule="evenodd"
+                              fillRule="evenodd"
                               d="M1.867 1.9a.467.467 0 11-.934 0 .467.467 0 01.934 0zm1.866 0a.467.467 0 11-.933 0 .467.467 0 01.933 0zm1.4.467a.467.467 0 100-.934.467.467 0 000 .934zM7.467 1.9a.467.467 0 11-.934 0 .467.467 0 01.934 0zM2.333 3.3a.467.467 0 100-.933.467.467 0 000 .933zm2.334-.467a.467.467 0 11-.934 0 .467.467 0 01.934 0zm1.4.467a.467.467 0 100-.933.467.467 0 000 .933zm1.4.467a.467.467 0 11-.934 0 .467.467 0 01.934 0zm-2.334.466a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.466a.467.467 0 11-.933 0 .467.467 0 01.933 0zM1.4 4.233a.467.467 0 100-.933.467.467 0 000 .933zm1.4.467a.467.467 0 11-.933 0 .467.467 0 01.933 0zm1.4.467a.467.467 0 100-.934.467.467 0 000 .934zM6.533 4.7a.467.467 0 11-.933 0 .467.467 0 01.933 0zM7 6.1a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.467a.467.467 0 11-.933 0 .467.467 0 01.933 0zM3.267 6.1a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.467a.467.467 0 11-.934 0 .467.467 0 01.934 0z"
-                              clip-rule="evenodd"
+                              clipRule="evenodd"
                             />
                           </g>
                         </g>
@@ -1357,9 +1357,9 @@ const AccountOverview = () => {
                       >
                         <path
                           stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="m19 9-7 7-7-7"
                         />
                       </svg>
@@ -1412,17 +1412,17 @@ const AccountOverview = () => {
                                 <g mask="url(#a)">
                                   <path
                                     fill="#D02F44"
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     d="M19.6.5H0v.933h19.6V.5zm0 1.867H0V3.3h19.6v-.933zM0 4.233h19.6v.934H0v-.934zM19.6 6.1H0v.933h19.6V6.1zM0 7.967h19.6V8.9H0v-.933zm19.6 1.866H0v.934h19.6v-.934zM0 11.7h19.6v.933H0V11.7zm19.6 1.867H0v.933h19.6v-.933z"
-                                    clip-rule="evenodd"
+                                    clipRule="evenodd"
                                   />
                                   <path fill="#46467F" d="M0 .5h8.4v6.533H0z" />
                                   <g filter="url(#filter0_d_343_121520)">
                                     <path
                                       fill="url(#paint0_linear_343_121520)"
-                                      fill-rule="evenodd"
+                                      fillRule="evenodd"
                                       d="M1.867 1.9a.467.467 0 11-.934 0 .467.467 0 01.934 0zm1.866 0a.467.467 0 11-.933 0 .467.467 0 01.933 0zm1.4.467a.467.467 0 100-.934.467.467 0 000 .934zM7.467 1.9a.467.467 0 11-.934 0 .467.467 0 01.934 0zM2.333 3.3a.467.467 0 100-.933.467.467 0 000 .933zm2.334-.467a.467.467 0 11-.934 0 .467.467 0 01.934 0zm1.4.467a.467.467 0 100-.933.467.467 0 000 .933zm1.4.467a.467.467 0 11-.934 0 .467.467 0 01.934 0zm-2.334.466a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.466a.467.467 0 11-.933 0 .467.467 0 01.933 0zM1.4 4.233a.467.467 0 100-.933.467.467 0 000 .933zm1.4.467a.467.467 0 11-.933 0 .467.467 0 01.933 0zm1.4.467a.467.467 0 100-.934.467.467 0 000 .934zM6.533 4.7a.467.467 0 11-.933 0 .467.467 0 01.933 0zM7 6.1a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.467a.467.467 0 11-.933 0 .467.467 0 01.933 0zM3.267 6.1a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.467a.467.467 0 11-.934 0 .467.467 0 01.934 0z"
-                                      clip-rule="evenodd"
+                                      clipRule="evenodd"
                                     />
                                   </g>
                                 </g>
@@ -1514,21 +1514,21 @@ const AccountOverview = () => {
                                   <path fill="#0A17A7" d="M0 .5h19.6v14H0z" />
                                   <path
                                     fill="#fff"
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     d="M-.898-.842L7.467 4.8V-.433h4.667V4.8l8.364-5.642L21.542.706l-6.614 4.46H19.6v4.667h-4.672l6.614 4.46-1.044 1.549-8.365-5.642v5.233H7.467V10.2l-8.365 5.642-1.043-1.548 6.613-4.46H0V5.166h4.672L-1.941.706-.898-.842z"
-                                    clip-rule="evenodd"
+                                    clipRule="evenodd"
                                   />
                                   <path
                                     stroke="#DB1F35"
-                                    stroke-linecap="round"
-                                    stroke-width=".667"
+                                    strokeLinecap="round"
+                                    strokeWidth=".667"
                                     d="M13.067 4.933L21.933-.9M14.009 10.088l7.947 5.357M5.604 4.917L-2.686-.67M6.503 10.024l-9.189 6.093"
                                   />
                                   <path
                                     fill="#E6273E"
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     d="M0 8.9h8.4v5.6h2.8V8.9h8.4V6.1h-8.4V.5H8.4v5.6H0v2.8z"
-                                    clip-rule="evenodd"
+                                    clipRule="evenodd"
                                   />
                                 </g>
                               </svg>
@@ -1578,26 +1578,26 @@ const AccountOverview = () => {
                                   <path
                                     fill="#fff"
                                     stroke="#fff"
-                                    stroke-width=".667"
+                                    strokeWidth=".667"
                                     d="M0 .167h-.901l.684.586 3.15 2.7v.609L-.194 6.295l-.14.1v1.24l.51-.319L3.83 5.033h.73L7.7 7.276a.488.488 0 00.601-.767L5.467 4.08v-.608l2.987-2.134a.667.667 0 00.28-.543V-.1l-.51.318L4.57 2.5h-.73L.66.229.572.167H0z"
                                   />
                                   <path
                                     fill="url(#paint0_linear_374_135177)"
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     d="M0 2.833V4.7h3.267v2.133c0 .369.298.667.666.667h.534a.667.667 0 00.666-.667V4.7H8.2a.667.667 0 00.667-.667V3.5a.667.667 0 00-.667-.667H5.133V.5H3.267v2.333H0z"
-                                    clip-rule="evenodd"
+                                    clipRule="evenodd"
                                   />
                                   <path
                                     fill="url(#paint1_linear_374_135177)"
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     d="M0 3.3h3.733V.5h.934v2.8H8.4v.933H4.667v2.8h-.934v-2.8H0V3.3z"
-                                    clip-rule="evenodd"
+                                    clipRule="evenodd"
                                   />
                                   <path
                                     fill="#fff"
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     d="M4.2 11.933l-.823.433.157-.916-.666-.65.92-.133.412-.834.411.834.92.134-.665.649.157.916-.823-.433zm9.8.7l-.66.194.194-.66-.194-.66.66.193.66-.193-.193.66.193.66-.66-.194zm0-8.866l-.66.193.194-.66-.194-.66.66.193.66-.193-.193.66.193.66-.66-.193zm2.8 2.8l-.66.193.193-.66-.193-.66.66.193.66-.193-.193.66.193.66-.66-.193zm-5.6.933l-.66.193.193-.66-.193-.66.66.194.66-.194-.193.66.193.66-.66-.193zm4.2 1.167l-.33.096.096-.33-.096-.33.33.097.33-.097-.097.33.097.33-.33-.096z"
-                                    clip-rule="evenodd"
+                                    clipRule="evenodd"
                                   />
                                 </g>
                                 <defs>
@@ -1668,24 +1668,24 @@ const AccountOverview = () => {
                                 <g mask="url(#a)">
                                   <path
                                     fill="#262626"
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     d="M0 5.167h19.6V.5H0v4.667z"
-                                    clip-rule="evenodd"
+                                    clipRule="evenodd"
                                   />
                                   <g filter="url(#filter0_d_374_135180)">
                                     <path
                                       fill="#F01515"
-                                      fill-rule="evenodd"
+                                      fillRule="evenodd"
                                       d="M0 9.833h19.6V5.167H0v4.666z"
-                                      clip-rule="evenodd"
+                                      clipRule="evenodd"
                                     />
                                   </g>
                                   <g filter="url(#filter1_d_374_135180)">
                                     <path
                                       fill="#FFD521"
-                                      fill-rule="evenodd"
+                                      fillRule="evenodd"
                                       d="M0 14.5h19.6V9.833H0V14.5z"
-                                      clip-rule="evenodd"
+                                      clipRule="evenodd"
                                     />
                                   </g>
                                 </g>
@@ -1775,7 +1775,7 @@ const AccountOverview = () => {
                                   y=".75"
                                   fill="#fff"
                                   stroke="#F5F5F5"
-                                  stroke-width=".5"
+                                  strokeWidth=".5"
                                   rx="1.75"
                                 />
                                 <mask
@@ -1794,7 +1794,7 @@ const AccountOverview = () => {
                                     y=".75"
                                     fill="#fff"
                                     stroke="#fff"
-                                    stroke-width=".5"
+                                    strokeWidth=".5"
                                     rx="1.75"
                                   />
                                 </mask>
@@ -1805,9 +1805,9 @@ const AccountOverview = () => {
                                   />
                                   <path
                                     fill="#1035BB"
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     d="M0 14.5h6.533V.5H0v14z"
-                                    clip-rule="evenodd"
+                                    clipRule="evenodd"
                                   />
                                 </g>
                               </svg>
@@ -1854,24 +1854,24 @@ const AccountOverview = () => {
                                 <g mask="url(#a)">
                                   <path
                                     fill="#262626"
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     d="M0 5.167h19.6V.5H0v4.667z"
-                                    clip-rule="evenodd"
+                                    clipRule="evenodd"
                                   />
                                   <g filter="url(#filter0_d_374_135180)">
                                     <path
                                       fill="#F01515"
-                                      fill-rule="evenodd"
+                                      fillRule="evenodd"
                                       d="M0 9.833h19.6V5.167H0v4.666z"
-                                      clip-rule="evenodd"
+                                      clipRule="evenodd"
                                     />
                                   </g>
                                   <g filter="url(#filter1_d_374_135180)">
                                     <path
                                       fill="#FFD521"
-                                      fill-rule="evenodd"
+                                      fillRule="evenodd"
                                       d="M0 14.5h19.6V9.833H0V14.5z"
-                                      clip-rule="evenodd"
+                                      clipRule="evenodd"
                                     />
                                   </g>
                                 </g>
@@ -2090,9 +2090,9 @@ const AccountOverview = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 ></path>
               </svg>
               <span className="sr-only">Close modal</span>
@@ -2109,9 +2109,9 @@ const AccountOverview = () => {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"
                 />
               </svg>
