@@ -12,7 +12,7 @@ const ProductListPage = async ({
   searchParams: Record<string, string | string | undefined>;
 }) => {
   const wixClient = await wixClientServer();
-  const categoryParams = searchParams?.category || "all-products";
+  const categoryParams = (await searchParams?.category) || "all-products";
   const categories = await wixClient.collections.getCollectionBySlug(
     categoryParams
   );

@@ -1,6 +1,7 @@
-import Image from "next/image";
 import CustomerSection from "../Customer/CustomerSection";
+import CustomizeProducts from "../productCustomize/CustomizeProduct";
 import ProductDesc from "../productDesc/ProductDesc";
+import ProductImages from "../productImages/ProductImages";
 import ProductReview from "../productReview/ProductReview";
 
 type Product = {
@@ -24,7 +25,7 @@ type Product = {
 
 const ProductDetails: React.FC<{ product: Product }> = ({ product }) => {
   const {
-    media: { mainMedia },
+    media,
     name,
     price: { price, discountedPrice },
     stock: { inStock },
@@ -35,15 +36,7 @@ const ProductDetails: React.FC<{ product: Product }> = ({ product }) => {
     <section className="py-8 bg-white md:py-16 dark:bg-gray-900 antialiased">
       <div className="max-w-screen-xl px-4 mx-auto 2xl:px-0">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16">
-          <div className="shrink-0 max-w-md lg:max-w-lg mx-auto">
-            <Image
-              className="w-full  dark:block"
-              src={mainMedia?.image.url}
-              width={500}
-              height={600}
-              alt=""
-            />
-          </div>
+          <ProductImages images={media} />
 
           <div className="mt-6 sm:mt-8 lg:mt-0">
             <h1 className="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">
@@ -139,6 +132,8 @@ const ProductDetails: React.FC<{ product: Product }> = ({ product }) => {
               )}
             </p>
 
+            <CustomizeProducts />
+
             <div className="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8">
               <a
                 href="#"
@@ -199,9 +194,12 @@ const ProductDetails: React.FC<{ product: Product }> = ({ product }) => {
               {description}
             </p>
           </div>
+          {/* This is elaborate description section */}
           <ProductDesc />
+          {/* product Review section */}
           <ProductReview />
         </div>
+        {/* Customer section */}
         <CustomerSection />
       </div>
     </section>
