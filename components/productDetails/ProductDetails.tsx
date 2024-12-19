@@ -1,35 +1,61 @@
+import Image from "next/image";
 import CustomerSection from "../Customer/CustomerSection";
 import ProductDesc from "../productDesc/ProductDesc";
 import ProductReview from "../productReview/ProductReview";
 
-const ProductDetails = () => {
+type Product = {
+  media: {
+    mainMedia: {
+      image: {
+        url: string;
+      };
+    };
+  };
+  name: string;
+  description: string;
+  price: {
+    price: number;
+    discountedPrice: number;
+  };
+  stock: {
+    inStock: boolean;
+  };
+};
+
+const ProductDetails: React.FC<{ product: Product }> = ({ product }) => {
+  const {
+    media: { mainMedia },
+    name,
+    price: { price, discountedPrice },
+    stock: { inStock },
+    description,
+  } = product;
+
   return (
     <section className="py-8 bg-white md:py-16 dark:bg-gray-900 antialiased">
       <div className="max-w-screen-xl px-4 mx-auto 2xl:px-0">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16">
           <div className="shrink-0 max-w-md lg:max-w-lg mx-auto">
-            <img
-              className="w-full dark:hidden"
-              src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front.svg"
-              alt=""
-            />
-            <img
-              className="w-full hidden dark:block"
-              src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front-dark.svg"
+            <Image
+              className="w-full  dark:block"
+              src={mainMedia?.image.url}
+              width={500}
+              height={600}
               alt=""
             />
           </div>
 
           <div className="mt-6 sm:mt-8 lg:mt-0">
             <h1 className="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">
-              Apple iMac 24&apos; All-In-One Computer, Apple M1, 8GB RAM, 256GB
-              SSD, Mac OS, Pink
+              {name}
             </h1>
             <div className="mt-4 sm:items-center sm:gap-4 sm:flex">
-              <p className="text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-white">
-                $1,249.99
+              <p className="text-2xl line-through text-gray-900 sm:text-3xl dark:text-white">
+                ${price}
               </p>
-
+              <p className="text-2xl  text-blue-900 sm:text-3xl dark:text-white">
+                ${discountedPrice}
+              </p>
               <div className="flex items-center gap-2 mt-2 sm:mt-0">
                 <div className="flex items-center gap-1">
                   <svg
@@ -99,6 +125,19 @@ const ProductDetails = () => {
                 </a>
               </div>
             </div>
+            <p>
+              {inStock ? (
+                <span>
+                  <span className="font-semibold">status:</span>
+                  <span className="text-green-600 capitalize">in stock</span>
+                </span>
+              ) : (
+                <span>
+                  <span className="font-semibold">status:</span>
+                  <span className="text-red-600 capitalize">out of stock</span>
+                </span>
+              )}
+            </p>
 
             <div className="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8">
               <a
@@ -157,16 +196,7 @@ const ProductDetails = () => {
             <hr className="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
 
             <p className="mb-6 text-gray-500 dark:text-gray-400">
-              Studio quality three mic array for crystal clear calls and voice
-              recordings. Six-speaker sound system for a remarkably robust and
-              high-quality audio experience. Up to 256GB of ultrafast SSD
-              storage.
-            </p>
-
-            <p className="text-gray-500 dark:text-gray-400">
-              Two Thunderbolt USB 4 ports and up to two USB 3 ports. Ultrafast
-              Wi-Fi 6 and Bluetooth 5.0 wireless. Color matched Magic Mouse with
-              Magic Keyboard or Magic Keyboard with Touch ID.
+              {description}
             </p>
           </div>
           <ProductDesc />

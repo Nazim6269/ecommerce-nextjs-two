@@ -1,12 +1,13 @@
 import { Suspense } from "react";
 import Categories from "../Categories/Categories";
 import Hero from "../heroSection/Hero";
+import LoadingSpinner from "../loading/Loading";
 
 const LandingPage = () => {
   return (
     <div>
       <Hero />
-      <Suspense fallback={<h2>Loading...</h2>}>
+      <Suspense fallback={<LoadingSpinner />}>
         <Categories />
       </Suspense>
     </div>

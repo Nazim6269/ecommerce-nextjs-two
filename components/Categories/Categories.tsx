@@ -49,7 +49,7 @@ const Categories = async () => {
               className="flex justify-center gap-1 items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
             >
               <Image
-                src={category?.media?.mainMedia?.image?.url || "cat.png"}
+                src={category?.media?.mainMedia?.image?.url || "/cat.png"}
                 alt="category image"
                 width={24}
                 height={24}
