@@ -39,7 +39,6 @@ type ImageType = {
 };
 
 const ProductImages: React.FC<{ images: ImageType }> = ({ images }) => {
-  console.log(images, "images");
   const [index, setIndex] = useState(0);
   return (
     <div className="">

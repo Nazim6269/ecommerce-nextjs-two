@@ -14,8 +14,7 @@ const page = async ({ params }: { params: { category: string } }) => {
   }
 
   const product = products?.items[0];
-  console.log(product);
-  console.log(product.variants, "product");
+
   return (
     <div>
       <ProductDetails product={product} />
