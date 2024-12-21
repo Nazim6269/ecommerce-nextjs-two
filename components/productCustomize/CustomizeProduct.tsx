@@ -2,7 +2,8 @@
 
 import { VariantType } from "@/lib/type";
 import { products } from "@wix/stores";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Add from "../add/Add";
 
 const CustomizeProducts: React.FC<{
   variants: VariantType[];
@@ -12,6 +13,7 @@ const CustomizeProducts: React.FC<{
   const [selectedOption, setSelectedOption] = useState<{
     [key: string]: string;
   }>({});
+  const [selectedVariant, setSelectedVariant] = useState<products.Variant>();
 
   // handle selected function
   const handleClick = (optionName: string, choiceDesc: string) => {
@@ -34,6 +36,19 @@ const CustomizeProducts: React.FC<{
       );
     });
   };
+
+  useEffect(() => {
+    const variant = variants.find((item) => {
+      const variantChoices = item.choices;
+      if (!variantChoices) {
+        return false;
+      }
+      return Object.entries(selectedOption).every(
+        ([key, value]) => variantChoices[key] === value
+      );
+    });
+    setSelectedVariant(variant);
+  }, [selectedOption, variants]);
   return (
     <div className="flex flex-col gap-6">
       {/* Static Product Option */}
@@ -51,9 +66,12 @@ const CustomizeProducts: React.FC<{
               //check is it selected
               const selected =
                 selectedOption[option.name!] === choice.description;
+
+              //click handler function
               const clickHandler = disabled
                 ? undefined
                 : () => handleClick(option.name!, choice.description!);
+
               return option.name === "Color" ? (
                 <li
                   className="w-8 h-8 rounded-full ring-1 ring-gray-300 relative"
@@ -73,15 +91,15 @@ const CustomizeProducts: React.FC<{
                 </li>
               ) : (
                 <li
-                  className="ring-1 ring-nazim text-nazim rounded-md py-1 px-4 text-sm"
+                  className="ring-1 ring-blue-500 text-nazim rounded-md py-1 px-4 text-sm"
                   style={{
                     cursor: disabled ? "not-allowed" : "pointer",
                     backgroundColor: selected
-                      ? "#f35c7a"
+                      ? "#5c7af3"
                       : disabled
-                      ? "#FBCFE8"
+                      ? "#cfdbfb"
                       : "white",
-                    color: selected || disabled ? "white" : "#f35c7a",
+                    color: selected || disabled ? "white" : "#5c7af3",
                     boxShadow: disabled ? "none" : "",
                   }}
                   key={choice.description}
@@ -92,28 +110,11 @@ const CustomizeProducts: React.FC<{
               );
             })}
           </ul>
-          {/* <ul className="flex items-center gap-3">
-            <li className="w-8 h-8 rounded-full ring-1 bg-orange-600 ring-gray-300"></li>
-            <li className="w-8 h-8 rounded-full ring-1 bg-green-500 ring-gray-300"></li>
-            <li className="w-8 h-8 rounded-full ring-1 bg-blue-600 ring-gray-300"></li>
-          </ul> */}
         </div>
       ))}
 
-      {/* <div className="flex flex-col gap-4">
-        <h4 className="font-medium">Choose a Size</h4>
-        <ul className="flex items-center gap-3">
-          <li className="ring-1 ring-gray-300 text-gray-600 rounded-md py-1 px-4 text-sm cursor-pointer">
-            Small
-          </li>
-          <li className="ring-1 ring-gray-300 text-gray-600 rounded-md py-1 px-4 text-sm cursor-pointer">
-            Medium
-          </li>
-          <li className="ring-1 ring-gray-300 text-gray-600 rounded-md py-1 px-4 text-sm cursor-pointer">
-            Large
-          </li>
-        </ul>
-      </div> */}
+      {/* add to cart and add to whish list */}
+      <Add variantStockNumber={selectedVariant?.stock?.quantity || 0} />
     </div>
   );
 };

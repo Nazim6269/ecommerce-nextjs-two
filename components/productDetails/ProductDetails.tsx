@@ -56,8 +56,6 @@ const ProductDetails: React.FC<{ product: Product }> = ({ product }) => {
               productId={product._id}
               productOptions={product.productOptions}
             />
-            {/* add to cart and add to whish list */}
-            <Add />
 
             <hr className="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
 

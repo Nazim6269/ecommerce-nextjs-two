@@ -19,6 +19,7 @@ export type Product = {
   };
   stock: {
     inStock: boolean;
+    quantity: number;
   };
   variants: VariantType[];
   _id: string;
