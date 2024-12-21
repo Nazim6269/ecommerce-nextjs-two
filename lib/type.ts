@@ -1,6 +1,6 @@
 export interface VariantType {
   choices: { Size: string; Color: string };
-  stock: { inStock: boolean };
+  stock: { inStock: boolean; quantity: number };
 }
 
 export type Product = {
