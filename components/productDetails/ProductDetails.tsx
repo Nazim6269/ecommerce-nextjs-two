@@ -6,6 +6,7 @@ import ProductDesc from "../productDesc/ProductDesc";
 import ProductImages from "../productImages/ProductImages";
 import ProductRating from "../productRating/ProductRating";
 import ProductReview from "../productReview/ProductReview";
+import DOMPurify from "isomorphic-dompurify";
 
 const ProductDetails: React.FC<{ product: Product }> = ({ product }) => {
   const {
@@ -16,6 +17,7 @@ const ProductDetails: React.FC<{ product: Product }> = ({ product }) => {
     description,
     variants,
   } = product;
+  const sanitizeDesc = DOMPurify.sanitize(description);
 
   return (
     <section className="py-8 bg-white md:py-16 dark:bg-gray-900 antialiased">
@@ -59,12 +61,13 @@ const ProductDetails: React.FC<{ product: Product }> = ({ product }) => {
 
             <hr className="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
 
-            <p className="mb-6 text-gray-500 dark:text-gray-400">
-              {description}
-            </p>
+            <p
+              className="mb-6 text-gray-500 dark:text-gray-400"
+              dangerouslySetInnerHTML={{ __html: sanitizeDesc }}
+            />
           </div>
           {/* This is elaborate description section */}
-          <ProductDesc />
+          <ProductDesc images={media} description={description} />
           {/* product Review section */}
           <ProductReview />
         </div>

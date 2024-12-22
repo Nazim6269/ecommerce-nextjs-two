@@ -1,3 +1,4 @@
+import ImageModal from "@/components/imageModal/ImageModal";
 import ProductDetails from "@/components/productDetails/ProductDetails";
 import { wixClientServer } from "@/lib/wixClientServer";
 import { notFound } from "next/navigation";

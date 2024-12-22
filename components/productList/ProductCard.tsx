@@ -1,29 +1,16 @@
+import { ProductCardProps } from "@/lib/type";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-interface Product {
-  media?: {
-    mainMedia?: {
-      image?: {
-        url?: string;
-      };
-    };
-  };
-  name?: string;
-
-  priceData?: { price?: number };
-  slug?: string;
-  _id: string;
-}
-
-const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
+const ProductCard: React.FC<{ product: ProductCardProps }> = ({ product }) => {
   return (
     <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
       <div className="h-56 w-full">
         <Link
           aria-label="product details"
           href={`productList/product/${product?.slug}/${product?._id}`}
+          className="font-bold capitalize"
         >
           <Image
             className="mx-auto  h-full "
@@ -113,12 +100,13 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
           </div>
         </div>
 
-        <a
-          href="#"
-          className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white"
+        <Link
+          aria-label="product details"
+          href={`productList/product/${product?.slug}/${product?._id}`}
+          className="font-bold capitalize"
         >
           {product?.name}
-        </a>
+        </Link>
 
         <div className="mt-2 flex items-center gap-2">
           <div className="flex items-center">

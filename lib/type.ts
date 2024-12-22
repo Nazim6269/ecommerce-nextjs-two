@@ -25,3 +25,31 @@ export type Product = {
   _id: string;
   productOptions: { name: string };
 };
+
+export type variantChoices = {
+  Size: string;
+  Color: string;
+};
+
+export interface ModalProps {
+  isOpen?: boolean;
+  onClose?: () => void;
+  imageUrl?: string;
+  title?: string;
+  image: any;
+}
+
+export interface ProductCardProps {
+  media?: {
+    mainMedia?: {
+      image?: {
+        url?: string;
+      };
+    };
+  };
+  name?: string;
+
+  priceData?: { price?: number };
+  slug?: string;
+  _id: string;
+}

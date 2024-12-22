@@ -1,6 +1,6 @@
 "use client";
 
-import { VariantType } from "@/lib/type";
+import { variantChoices, VariantType } from "@/lib/type";
 import { products } from "@wix/stores";
 import { useEffect, useState } from "react";
 import Add from "../add/Add";
@@ -29,7 +29,8 @@ const CustomizeProducts: React.FC<{
 
       return (
         Object.entries(choices).every(
-          ([key, value]) => variantChoices[key] === value
+          ([key, value]) =>
+            variantChoices[key as keyof variantChoices] === value
         ) &&
         variant.stock?.inStock &&
         variant.stock?.quantity > 0
@@ -44,7 +45,7 @@ const CustomizeProducts: React.FC<{
         return false;
       }
       return Object.entries(selectedOption).every(
-        ([key, value]) => variantChoices[key] === value
+        ([key, value]) => variantChoices[key as keyof variantChoices] === value
       );
     });
     setSelectedVariant(variant);
