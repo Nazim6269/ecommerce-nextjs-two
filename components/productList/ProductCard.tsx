@@ -9,7 +9,7 @@ const ProductCard: React.FC<{ product: ProductCardProps }> = ({ product }) => {
       <div className="h-56 w-full">
         <Link
           aria-label="product details"
-          href={`productList/product/${product?.slug}/${product?._id}`}
+          href={`/productList/product/${product?.slug}/${product?._id}`}
           className="font-bold capitalize"
         >
           <Image
@@ -102,7 +102,7 @@ const ProductCard: React.FC<{ product: ProductCardProps }> = ({ product }) => {
 
         <Link
           aria-label="product details"
-          href={`productList/product/${product?.slug}/${product?._id}`}
+          href={`/productList/product/${product?.slug}/${product?._id}`}
           className="font-bold capitalize"
         >
           {product?.name}

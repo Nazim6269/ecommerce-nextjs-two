@@ -28,6 +28,7 @@ const page = async ({ params }: { params: { category: string } }) => {
             alt={"Image"}
             className="w-full h-auto rounded-lg"
           />
+          <ImageModal image={image} />
         </div>
       </div>
     </div>

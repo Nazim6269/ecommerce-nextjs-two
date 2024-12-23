@@ -1,4 +1,21 @@
+"use client";
+
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+
 const FilterSidebar = () => {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const hadnleFilterChage = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value, type, checked, nextSibling } = e.target;
+
+    const params = new URLSearchParams(searchParams);
+    params.set(name, nextSibling?.textContent ?? value);
+    console.log(params);
+
+    router.replace(`${pathname}?${params.toString()}`);
+  };
   return (
     <div className="w-64 bg-white shadow-lg rounded-lg p-6">
       {/* Filter Header */}
@@ -8,46 +25,52 @@ const FilterSidebar = () => {
       <div className="mb-6">
         <h3 className="text-lg font-medium text-gray-700 mb-3">Categories</h3>
         <ul className="space-y-2">
-          <li>
-            <label className="flex items-center text-gray-600">
-              <input type="checkbox" className="w-4 h-4 text-blue-500 mr-2" />
-              Electronics
-            </label>
-          </li>
-          <li>
-            <label className="flex items-center text-gray-600">
-              <input type="checkbox" className="w-4 h-4 text-blue-500 mr-2" />
-              Fashion
-            </label>
-          </li>
-          <li>
-            <label className="flex items-center text-gray-600">
-              <input type="checkbox" className="w-4 h-4 text-blue-500 mr-2" />
-              Home Appliances
-            </label>
-          </li>
-          <li>
-            <label className="flex items-center text-gray-600">
-              <input type="checkbox" className="w-4 h-4 text-blue-500 mr-2" />
-              Books
-            </label>
-          </li>
+          {["bag", "shoes", "sunglass", "jacket"].map((category) => (
+            <li key={category}>
+              <label className="flex items-center text-gray-600">
+                <input
+                  type="checkbox"
+                  name="category"
+                  className="w-4 h-4 text-blue-500 mr-2"
+                  onChange={hadnleFilterChage}
+                />
+                {category}
+              </label>
+            </li>
+          ))}
         </ul>
       </div>
 
       {/* Price Range Section */}
       <div className="mb-6">
         <h3 className="text-lg font-medium text-gray-700 mb-3">Price Range</h3>
-        <div className="space-y-2">
-          <input
-            type="range"
-            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-            min="0"
-            max="1000"
-          />
-          <div className="flex justify-between text-sm text-gray-600">
-            <span>$0</span>
-            <span>$1000</span>
+        <div className="space-y-4">
+          {/* Min and Max Price Inputs */}
+          <div className="flex justify-between items-center text-sm text-gray-600">
+            <div className="flex items-center space-x-2">
+              <label htmlFor="minPrice" className="text-gray-700 font-medium">
+                Min:
+              </label>
+              <input
+                type="number"
+                id="minPrice"
+                name="min"
+                className="w-20 border border-gray-300 rounded-md px-2 py-1"
+                onChange={hadnleFilterChage}
+              />
+            </div>
+            <div className="flex items-center space-x-2">
+              <label htmlFor="maxPrice" className="text-gray-700 font-medium">
+                Max:
+              </label>
+              <input
+                type="number"
+                name="max"
+                id="maxPrice"
+                className="w-20 border border-gray-300 rounded-md px-2 py-1"
+                onChange={hadnleFilterChage}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -56,30 +79,14 @@ const FilterSidebar = () => {
       <div className="mb-6">
         <h3 className="text-lg font-medium text-gray-700 mb-3">Ratings</h3>
         <ul className="space-y-2">
-          <li>
-            <label className="flex items-center text-gray-600">
-              <input type="radio" name="rating" className="w-4 h-4 mr-2" />
-              ★★★★★
-            </label>
-          </li>
-          <li>
-            <label className="flex items-center text-gray-600">
-              <input type="radio" name="rating" className="w-4 h-4 mr-2" />
-              ★★★★☆
-            </label>
-          </li>
-          <li>
-            <label className="flex items-center text-gray-600">
-              <input type="radio" name="rating" className="w-4 h-4 mr-2" />
-              ★★★☆☆
-            </label>
-          </li>
-          <li>
-            <label className="flex items-center text-gray-600">
-              <input type="radio" name="rating" className="w-4 h-4 mr-2" />
-              ★★☆☆☆
-            </label>
-          </li>
+          {["★★★★★", "★★★★☆", "★★★☆☆", "★★☆☆☆"].map((rating, index) => (
+            <li key={index}>
+              <label className="flex items-center text-gray-600">
+                <input type="radio" name="rating" className="w-4 h-4 mr-2" />
+                {rating}
+              </label>
+            </li>
+          ))}
         </ul>
       </div>
 
@@ -87,30 +94,19 @@ const FilterSidebar = () => {
       <div className="mb-6">
         <h3 className="text-lg font-medium text-gray-700 mb-3">Brands</h3>
         <ul className="space-y-2">
-          <li>
-            <label className="flex items-center text-gray-600">
-              <input type="checkbox" className="w-4 h-4 text-blue-500 mr-2" />
-              Apple
-            </label>
-          </li>
-          <li>
-            <label className="flex items-center text-gray-600">
-              <input type="checkbox" className="w-4 h-4 text-blue-500 mr-2" />
-              Samsung
-            </label>
-          </li>
-          <li>
-            <label className="flex items-center text-gray-600">
-              <input type="checkbox" className="w-4 h-4 text-blue-500 mr-2" />
-              Sony
-            </label>
-          </li>
-          <li>
-            <label className="flex items-center text-gray-600">
-              <input type="checkbox" className="w-4 h-4 text-blue-500 mr-2" />
-              Nike
-            </label>
-          </li>
+          {["Apple", "Samsung", "Sony", "Nike"].map((brand) => (
+            <li key={brand}>
+              <label className="flex items-center text-gray-600">
+                <input
+                  type="checkbox"
+                  name="brands"
+                  value={brand}
+                  className="w-4 h-4 text-blue-500 mr-2"
+                />
+                {brand}
+              </label>
+            </li>
+          ))}
         </ul>
       </div>
 

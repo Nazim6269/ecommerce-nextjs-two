@@ -11,8 +11,6 @@ const ImageModal: React.FC<ModalProps> = ({
 }) => {
   if (!isOpen) return null;
 
-  console.log(image, "image");
-
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
       <div className="relative bg-white rounded-lg shadow-lg w-11/12 max-w-lg">

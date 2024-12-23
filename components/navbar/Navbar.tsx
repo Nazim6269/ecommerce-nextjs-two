@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-8">
             <div className="shrink-0">
-              <Link aria-label="homepage" href="/" title="" className="">
+              <Link aria-label="homepage" href="/login" title="" className="">
                 <img
                   className="block w-auto h-8 dark:hidden"
                   src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/logo-full.svg"
