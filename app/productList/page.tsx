@@ -3,6 +3,7 @@ import SortingBar from "@/components/filterTopbar/SortingBar";
 import FilterTopbar from "@/components/filterTopbar/SortingBar";
 import LoadingSpinner from "@/components/loading/Loading";
 import ProductList from "@/components/productList/ProductList";
+import SearchBar from "@/components/productSearch/SearchProduct";
 import { wixClientServer } from "@/lib/wixClientServer";
 import { Suspense } from "react";
 
@@ -20,38 +21,32 @@ const ProductListPage = async ({
   );
 
   return (
-    <section className="bg-gray-50 py-8 antialiased dark:bg-gray-900 md:py-12">
-      {/* <!-- Heading & Filters --> */}
-      <section className="mx-auto flex gap-3 max-w-screen-xl px-4 2xl:px-0">
-        {/* left section filtering side bar */}
-        <div className="hidden md:flex">
-          <FilterSidebar />
-        </div>
-        {/* right section listing all products */}
-        <div>
-          <div className="mb-4 items-end justify-between space-y-4 sm:flex sm:space-y-0 md:mb-8">
-            <div>
-              {/* BreadCrumbs */}
-              {/* <Breadcrumbs /> */}
+    <section className="mx-auto py-8 md:py-12 bg-gray-50 flex antialiased gap-3 max-w-screen-xl px-4 2xl:px-0">
+      {/* =========left section filtering side bar========= */}
+      <div className="hidden md:flex self-start">
+        <FilterSidebar />
+      </div>
+      {/* ============right section listing all products=========== */}
+      <div>
+        <div className="mb-4 flex items-center justify-between space-y-4 sm:flex sm:space-y-0 md:mb-8">
+          {/* Filter Top  bar  */}
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">
+            {categories?.collection?.name}
+          </h2>
 
-              <h2 className="mt-3 text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">
-                {categories?.collection?.name}
-              </h2>
-            </div>
-            {/* Filter Top  bar  */}
-            <SortingBar />
-          </div>
-          {/* all products section */}
-          <div>
-            <Suspense fallback={<LoadingSpinner />}>
-              <ProductList
-                categoryId={categories?.collection?._id || ALL_PRODUCTS_ID}
-                searchParams={searchParams}
-              />
-            </Suspense>
-          </div>
+          <SearchBar />
+          <SortingBar />
         </div>
-      </section>
+        {/* all products section */}
+        <div>
+          <Suspense fallback={<LoadingSpinner />}>
+            <ProductList
+              categoryId={categories?.collection?._id || ALL_PRODUCTS_ID}
+              searchParams={searchParams}
+            />
+          </Suspense>
+        </div>
+      </div>
     </section>
   );
 };

@@ -8,16 +8,14 @@ const FilterSidebar = () => {
   const pathname = usePathname();
 
   const hadnleFilterChage = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked, nextSibling } = e.target;
+    const { name, value, nextSibling } = e.target;
 
     const params = new URLSearchParams(searchParams);
     params.set(name, nextSibling?.textContent ?? value);
-    console.log(params);
-
     router.replace(`${pathname}?${params.toString()}`);
   };
   return (
-    <div className="w-64 bg-white shadow-lg rounded-lg p-6">
+    <div className=" h-auto w-64 bg-white shadow-lg rounded-lg p-6">
       {/* Filter Header */}
       <h2 className="text-xl font-semibold text-gray-700 mb-4">Filters</h2>
 
@@ -55,7 +53,7 @@ const FilterSidebar = () => {
                 type="number"
                 id="minPrice"
                 name="min"
-                className="w-20 border border-gray-300 rounded-md px-2 py-1"
+                className="w-16 border border-gray-300 rounded-md px-2 py-1"
                 onChange={hadnleFilterChage}
               />
             </div>
@@ -67,7 +65,7 @@ const FilterSidebar = () => {
                 type="number"
                 name="max"
                 id="maxPrice"
-                className="w-20 border border-gray-300 rounded-md px-2 py-1"
+                className="w-16 border border-gray-300 rounded-md px-2 py-1"
                 onChange={hadnleFilterChage}
               />
             </div>

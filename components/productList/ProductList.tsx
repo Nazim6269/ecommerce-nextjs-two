@@ -13,13 +13,27 @@ const ProductList = async ({
 }) => {
   const wixClient = await wixClientServer();
 
-  const res = await wixClient.products
+  const productsQuery = wixClient.products
     .queryProducts()
+    .startsWith("name", searchParams?.name || "")
+    .hasSome("productType", [searchParams?.type || "physical", "digital"])
     .eq("collectionIds", categoryId)
     .gt("priceData.price", searchParams?.min || 0)
     .lt("priceData.price", searchParams?.max || 99999)
-    .limit(limit || 20)
-    .find();
+    .limit(limit || 20);
+  //Sorting method didn't work
+  if (searchParams?.sort) {
+    const [sortType, sortBy] = searchParams.sort.split(" ");
+
+    if (sortType === "asc") {
+      productsQuery.ascending(sortBy);
+    }
+    if (sortType === "desc") {
+      productsQuery.descending(sortBy);
+    }
+  }
+
+  const res = await productsQuery.find();
 
   return (
     <>
