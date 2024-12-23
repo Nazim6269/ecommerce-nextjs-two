@@ -1,6 +1,6 @@
 "use client";
 
-import Login from "@/components/login/Login";
+import Login from "@/components/login/LoginForm";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 

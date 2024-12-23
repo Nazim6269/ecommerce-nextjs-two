@@ -1,6 +1,10 @@
 import Link from "next/link";
+import Logout from "../login/Logout";
+import { getServerSession } from "next-auth";
+import { authoptions } from "@/app/api/auth/[...nextauth]/option";
 
-const Navbar = () => {
+const Navbar = async () => {
+  const session = await getServerSession(authoptions);
   return (
     <nav className="bg-white dark:bg-gray-800 antialiased">
       <div className="max-w-screen-xl px-4 mx-auto 2xl:px-0 py-4">
@@ -73,6 +77,16 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center lg:space-x-2">
+            {session ? (
+              <Logout />
+            ) : (
+              <Link
+                href={"/login"}
+                className="inline-flex border  items-center rounded-lg justify-center p-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium leading-none text-gray-900 dark:text-white"
+              >
+                Login
+              </Link>
+            )}
             <button
               id="myCartDropdownButton1"
               data-dropdown-toggle="myCartDropdown1"
@@ -117,7 +131,7 @@ const Navbar = () => {
               </svg>
             </button>
 
-            <div
+            {/* <div
               id="myCartDropdown1"
               className="hidden z-10 mx-auto max-w-sm space-y-4 overflow-hidden rounded-lg bg-white p-4 antialiased shadow-lg dark:bg-gray-800"
             >
@@ -375,7 +389,7 @@ const Navbar = () => {
                 {" "}
                 Proceed to Checkout{" "}
               </a>
-            </div>
+            </div> */}
 
             <button
               id="userDropdownButton1"
