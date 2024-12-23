@@ -1,6 +1,9 @@
 import { wixClientServer } from "@/lib/wixClientServer";
 import ProductCard from "./ProductCard";
 import FilterTopbar from "../filterTopbar/SortingBar";
+import Pagination from "../pagination/Pagination";
+
+const PRODUCT_PER_PAGE = 4;
 
 const ProductList = async ({
   categoryId,
@@ -20,7 +23,12 @@ const ProductList = async ({
     .eq("collectionIds", categoryId)
     .gt("priceData.price", searchParams?.min || 0)
     .lt("priceData.price", searchParams?.max || 99999)
-    .limit(limit || 20);
+    .limit(limit || PRODUCT_PER_PAGE)
+    .skip(
+      searchParams?.page
+        ? parseInt(searchParams?.page) * (limit || PRODUCT_PER_PAGE)
+        : 0
+    );
   //Sorting method didn't work
   if (searchParams?.sort) {
     const [sortType, sortBy] = searchParams.sort.split(" ");
@@ -45,15 +53,11 @@ const ProductList = async ({
       </div>
 
       {/* pagination component */}
-      <div className="w-full text-center">
-        <button
-          type="button"
-          className="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
-        >
-          Show more
-        </button>
-        {/* <!-- Filter modal --> */}
-      </div>
+      <Pagination
+        currentPage={res?.currentPage || 0}
+        hasPrev={res?.hasPrev()}
+        hasNext={res?.hasNext()}
+      />
     </>
   );
 };
