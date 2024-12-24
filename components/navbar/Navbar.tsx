@@ -16,37 +16,39 @@ const Navbar = async ({ rightMenu }: { rightMenu: boolean }) => {
     <nav className="bg-white dark:bg-gray-800 antialiased">
       <div className="max-w-screen-xl px-4 mx-auto 2xl:px-0 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-8">
-            <div className="shrink-0">
-              <Link aria-label="homepage" href="/" title="" className="">
-                <img
-                  className="block w-auto h-8 dark:hidden"
-                  src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/logo-full.svg"
-                  alt=""
-                />
-                <img
-                  className="hidden w-auto h-8 dark:block"
-                  src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/logo-full-dark.svg"
-                  alt=""
-                />
-              </Link>
-            </div>
+          {session?.user && (
+            <div className="flex items-center space-x-8">
+              <div className="shrink-0">
+                <Link aria-label="homepage" href="/" title="" className="">
+                  <img
+                    className="block w-auto h-8 dark:hidden"
+                    src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/logo-full.svg"
+                    alt=""
+                  />
+                  <img
+                    className="hidden w-auto h-8 dark:block"
+                    src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/logo-full-dark.svg"
+                    alt=""
+                  />
+                </Link>
+              </div>
 
-            <ul className="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
-              {navLinks.map((item) => (
-                <li key={item.id}>
-                  <Link
-                    aria-label="go to homepage"
-                    href={item.url}
-                    title=""
-                    className="flex text-sm font-medium text-gray-900 hover:text-primary-700 capitalize dark:text-white dark:hover:text-primary-500"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+              <ul className="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
+                {navLinks.map((item) => (
+                  <li key={item.id}>
+                    <Link
+                      aria-label="go to homepage"
+                      href={item.url}
+                      title=""
+                      className="flex text-sm font-medium text-gray-900 hover:text-primary-700 capitalize dark:text-white dark:hover:text-primary-500"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <div className="flex items-center lg:space-x-2">
             {session ? (
@@ -78,7 +80,13 @@ const Navbar = async ({ rightMenu }: { rightMenu: boolean }) => {
                           d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
                         />
                       </svg>
-                      <span className="hidden sm:flex">My Cart</span>
+                      <Link
+                        href={"/cart"}
+                        aria-label="go to cart page"
+                        className="hidden sm:flex"
+                      >
+                        My Cart
+                      </Link>
                       <svg
                         className="hidden sm:flex w-4 h-4 text-gray-900 dark:text-white ms-1"
                         aria-hidden="true"
@@ -142,12 +150,14 @@ const Navbar = async ({ rightMenu }: { rightMenu: boolean }) => {
                 )}
               </>
             ) : (
-              <Link
-                href={"/login"}
-                className="inline-flex border  items-center rounded-lg justify-center p-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium leading-none text-gray-900 dark:text-white"
-              >
-                Login
-              </Link>
+              <>
+                <Link
+                  href={"/login"}
+                  className="inline-flex border bg-slate-500 text-white items-center rounded-lg justify-center p-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium leading-none hover:text-gray-900 dark:text-white"
+                >
+                  Login
+                </Link>
+              </>
             )}
 
             {/* menu button */}
