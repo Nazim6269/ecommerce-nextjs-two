@@ -7,7 +7,7 @@ import { useState } from "react";
 const SocialLogin = () => {
   const handleClick = () => {
     signIn("google", {
-      callbackUrl: "http://localhost:3000/order/checkout",
+      callbackUrl: "http://localhost:3000/checkout",
       redirect: false,
     });
   };
