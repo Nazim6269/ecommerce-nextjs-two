@@ -31,7 +31,12 @@ export const loginAction = async (formData: FormData) => {
       redirect: false,
     };
     const res = await signIn("credentials", signInData);
-    return res;
+    console.log(res, "indexts");
+    if (res) {
+      return { success: true, message: "Logged in successfully" };
+    } else {
+      return { success: false, message: "Failed to loggedin" };
+    }
   } catch (error) {
     console.log(error);
   }

@@ -3,20 +3,26 @@
 import { loginAction } from "@/app/actions";
 import SocialLogin from "./SocialLogin";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 const Login = () => {
   const router = useRouter();
+  const [error, setError] = useState<string | undefined>("");
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       const formData = new FormData(e.currentTarget);
       const res = await loginAction(formData);
-      if (res?.error) {
-        console.log(res.error);
-      } else {
+      console.log(res, "res");
+      if (res?.success) {
         router.push("/");
+      } else {
+        setError(res?.message);
       }
-    } catch (error) {}
+    } catch (error) {
+      setError(error);
+    }
   };
 
   return (
@@ -24,6 +30,7 @@ const Login = () => {
       <h2 className="text-2xl font-bold text-center text-gray-800">Login</h2>
       <form className="mt-6" onSubmit={handleSubmit}>
         {/* Email */}
+        {error && <p>{error}</p>}
         <div className="mb-4">
           <label
             htmlFor="email"

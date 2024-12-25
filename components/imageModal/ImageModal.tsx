@@ -1,6 +1,6 @@
 "use client";
 
-import { ModalProps } from "@/lib/type";
+import { ModalProps } from "@/types/type";
 import React from "react";
 
 const ImageModal: React.FC<ModalProps> = ({

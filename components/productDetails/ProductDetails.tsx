@@ -1,4 +1,4 @@
-import { Product } from "@/lib/type";
+import { Product } from "@/types/type";
 import Add from "../add/Add";
 import CustomerSection from "../Customer/CustomerSection";
 import CustomizeProducts from "../productCustomize/CustomizeProduct";

@@ -6,10 +6,12 @@ import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import Google from "next-auth/providers/google";
 
-export const authoptions = {
+export const authoptions: any = {
   adapter: MongoDBAdapter(client, { databaseName: process.env.ENVIRONMENT }),
   session: {
     strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60, // 30 days
+    updateAge: 24 * 60 * 60, // 24 hours
   },
   providers: [
     Credentials({
@@ -28,7 +30,7 @@ export const authoptions = {
         },
       },
 
-      async authorize() {
+      async authorize(credentials: any): Promise<any> {
         try {
           await connectMongo();
           if (!credentials?.password || !credentials?.email) {
@@ -37,17 +39,15 @@ export const authoptions = {
 
           const user = await findUserFromDB(credentials);
 
-          if (!user) {
-            return null;
+          if (user) {
+            const isMatch = user.password === credentials.password;
+
+            if (!isMatch) {
+              return user;
+            } else {
+              return null;
+            }
           }
-
-          const isMatch = user.password === credentials.password;
-
-          if (!isMatch) {
-            return null;
-          }
-
-          return user;
         } catch (error) {
           return null;
         }
@@ -65,6 +65,7 @@ export const authoptions = {
       },
     }),
   ],
+
   secret: process.env.NEXTAUTH_SECRET,
 };
 

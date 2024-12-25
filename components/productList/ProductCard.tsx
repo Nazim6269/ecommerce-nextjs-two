@@ -1,4 +1,4 @@
-import { ProductCardProps } from "@/lib/type";
+import { ProductCardProps } from "@/types/type";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

@@ -1,5 +1,5 @@
 import { userModel } from "@/models/userModel";
-import { UserType } from "./type";
+import { UserType } from "../types/type";
 
 export const findUserFromDB = async (user: UserType) => {
   try {
@@ -18,7 +18,6 @@ export const findUserFromDB = async (user: UserType) => {
 export const registerToDB = async (data: UserType) => {
   try {
     const isFound = await userModel.find({ email: data?.email });
-    console.log(isFound, "isfound");
     if (!isFound) {
       const newUser = await userModel.create({
         name: data.name,

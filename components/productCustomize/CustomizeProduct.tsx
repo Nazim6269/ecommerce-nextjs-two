@@ -1,6 +1,6 @@
 "use client";
 
-import { variantChoices, VariantType } from "@/lib/type";
+import { variantChoices, VariantType } from "@/types/type";
 import { products } from "@wix/stores";
 import { useEffect, useState } from "react";
 import Add from "../add/Add";
