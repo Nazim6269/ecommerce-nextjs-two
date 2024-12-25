@@ -53,3 +53,10 @@ export interface ProductCardProps {
   slug?: string;
   _id: string;
 }
+
+export type UserType = {
+  name: string;
+  email: string;
+  password: string;
+  cfpassword: string;
+};

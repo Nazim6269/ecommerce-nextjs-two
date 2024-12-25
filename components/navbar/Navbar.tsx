@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Logout from "../login/Logout";
-import { getServerSession } from "next-auth";
-import { authoptions } from "@/app/api/auth/[...nextauth]/option";
+
+import { auth } from "@/auth";
 
 const navLinks = [
   { name: "home", id: "1", url: "/" },
@@ -11,7 +11,9 @@ const navLinks = [
 ];
 
 const Navbar = async ({ rightMenu }: { rightMenu: boolean }) => {
-  const session = await getServerSession(authoptions);
+  const session = await auth();
+  console.log(session, "session");
+
   return (
     <nav className="bg-white dark:bg-gray-800 antialiased">
       <div className="max-w-screen-xl px-4 mx-auto 2xl:px-0 py-4">
@@ -153,7 +155,7 @@ const Navbar = async ({ rightMenu }: { rightMenu: boolean }) => {
               <>
                 <Link
                   href={"/login"}
-                  className="inline-flex border bg-slate-500 text-white items-center rounded-lg justify-center p-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium leading-none hover:text-gray-900 dark:text-white"
+                  className="inline-flex border bg-blue-500 text-white items-center rounded-md justify-center p-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium leading-none hover:text-gray-900 dark:text-white"
                 >
                   Login
                 </Link>

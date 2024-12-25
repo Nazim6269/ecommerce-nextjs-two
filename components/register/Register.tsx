@@ -1,10 +1,38 @@
-import SocialLogin from "../login/SocialLogin";
+"use client";
 
-const Register = () => {
+import Link from "next/link";
+import SocialLogin from "../login/SocialLogin";
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import { doRegisterAction } from "@/app/actions";
+
+const Register: React.FC<{}> = () => {
+  const router = useRouter();
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const handleRegister = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      setLoading(true);
+      const formData = new FormData(e.currentTarget);
+
+      const res = await doRegisterAction(formData);
+
+      if (res.success === false) {
+        router.push("/login");
+      } else {
+        setError("Something went wrong ");
+      }
+    } catch (error: any) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div className="w-full max-w-md mx-auto mt-10 bg-white shadow-md rounded-lg p-6">
       <h2 className="text-2xl font-bold text-center text-gray-800">Register</h2>
-      <form className="mt-6">
+      <form className="mt-6" onSubmit={handleRegister}>
         {/* Name */}
         <div className="mb-4">
           <label
@@ -16,6 +44,7 @@ const Register = () => {
           <input
             type="text"
             id="name"
+            name="name"
             className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
             placeholder="Enter your full name"
             required
@@ -32,6 +61,7 @@ const Register = () => {
           </label>
           <input
             type="email"
+            name="email"
             id="email"
             className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
             placeholder="Enter your email"
@@ -50,6 +80,7 @@ const Register = () => {
           <input
             type="password"
             id="password"
+            name="password"
             className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
             placeholder="Enter your password"
             required
@@ -67,6 +98,7 @@ const Register = () => {
           <input
             type="password"
             id="confirm-password"
+            name="cfpassword"
             className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
             placeholder="Re-enter your password"
             required
@@ -86,9 +118,13 @@ const Register = () => {
         {/* Additional Options */}
         <div className="mt-4 text-sm text-center text-gray-600">
           Already have an account?{" "}
-          <a href="/login" className="text-blue-500 hover:underline">
+          <Link
+            aria-label="go to login"
+            href="/login"
+            className="text-blue-500 hover:underline"
+          >
             Login
-          </a>
+          </Link>
         </div>
       </form>
     </div>

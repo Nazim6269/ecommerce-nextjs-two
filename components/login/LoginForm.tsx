@@ -1,10 +1,28 @@
+"use client";
+
+import { loginAction } from "@/app/actions";
 import SocialLogin from "./SocialLogin";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
+  const router = useRouter();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      const formData = new FormData(e.currentTarget);
+      const res = await loginAction(formData);
+      if (res?.error) {
+        console.log(res.error);
+      } else {
+        router.push("/");
+      }
+    } catch (error) {}
+  };
+
   return (
     <div className="w-full max-w-md mx-auto mt-10 bg-white shadow-md rounded-lg p-6">
       <h2 className="text-2xl font-bold text-center text-gray-800">Login</h2>
-      <form className="mt-6">
+      <form className="mt-6" onSubmit={handleSubmit}>
         {/* Email */}
         <div className="mb-4">
           <label
@@ -15,7 +33,7 @@ const Login = () => {
           </label>
           <input
             type="email"
-            id="email"
+            name="email"
             className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
             placeholder="Enter your email"
             required
@@ -32,7 +50,7 @@ const Login = () => {
           </label>
           <input
             type="password"
-            id="password"
+            name="password"
             className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
             placeholder="Enter your password"
             required
