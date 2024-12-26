@@ -1,6 +1,6 @@
 "use client";
 
-import { variantChoices, VariantType } from "@/types/type";
+import { Product, variantChoices, VariantType } from "@/types/type";
 import { products } from "@wix/stores";
 import { useEffect, useState } from "react";
 import Add from "../add/Add";
@@ -9,7 +9,8 @@ const CustomizeProducts: React.FC<{
   variants: VariantType[];
   productId: string;
   productOptions: products.ProductOption[];
-}> = ({ variants, productId, productOptions }) => {
+  product: Product;
+}> = ({ variants, productId, productOptions, product }) => {
   const [selectedOption, setSelectedOption] = useState<{
     [key: string]: string;
   }>({});
@@ -115,7 +116,11 @@ const CustomizeProducts: React.FC<{
       ))}
 
       {/* add to cart and add to whish list */}
-      <Add variantStockNumber={selectedVariant?.stock?.quantity || 0} />
+      <Add
+        variantId={selectedVariant?._id!}
+        variantStockNumber={selectedVariant?.stock?.quantity || 0}
+        product={product}
+      />
     </div>
   );
 };

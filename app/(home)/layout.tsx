@@ -16,13 +16,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ecommerce Two",
+  title: {
+    default: "Ecommerce Two",
+    template: "%s - Ecommerce Two",
+  },
   description: "A real world e-commerce site",
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default async function RootLayout({
   children,
-  modal,
 }: Readonly<{
   children: React.ReactNode;
   modal: React.ReactNode;

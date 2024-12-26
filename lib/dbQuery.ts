@@ -1,5 +1,6 @@
 import { userModel } from "@/models/userModel";
-import { UserType } from "../types/type";
+import { Product, UserType } from "../types/type";
+import { cartModel } from "@/models/cartListModel";
 
 export const findUserFromDB = async (user: UserType) => {
   try {
@@ -42,5 +43,28 @@ export const registerToDB = async (data: UserType) => {
     }
   } catch (error: any) {
     return { success: false, message: error.message || "Something went wrong" };
+  }
+};
+
+export const addToCartInMongo = async (
+  quantity: number,
+  product: Product,
+  variantId?: string
+) => {
+  try {
+    const newProduct = await cartModel.create({
+      quantity,
+      variantId,
+    });
+
+    const res = await newProduct.save();
+
+    if (res) {
+      return { success: true, message: "Successfully item added to cart " };
+    } else {
+      return { success: false, message: "Failed to add cart, try again!!!" };
+    }
+  } catch (error) {
+    throw error;
   }
 };

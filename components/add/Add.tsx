@@ -1,9 +1,22 @@
 "use client";
 
+import { addToCartInMongo } from "@/lib/dbQuery";
+import { Product } from "@/types/type";
 import React, { useState } from "react";
 
-const Add = ({ variantStockNumber }: { variantStockNumber: number }) => {
+const Add: React.FC<{
+  variantStockNumber: number;
+  variantId: string;
+
+  product: Product;
+}> = ({ variantStockNumber, variantId, product }) => {
   const [quantity, setQuantity] = useState(1);
+
+  //TODO: error in adding item in cart
+  const addToCart = async () => {
+    const res = await addToCartInMongo(quantity, product, variantId);
+    if (res.success) console.log(res?.message);
+  };
 
   return (
     <div className="mt-6 ">
@@ -72,11 +85,11 @@ const Add = ({ variantStockNumber }: { variantStockNumber: number }) => {
           Add to favorites
         </a>
         {/* Add to cart button */}
-        <a
-          href="#"
+        <button
           title=""
           className="text-white mt-4 sm:mt-0 bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 flex items-center justify-center"
-          role="button"
+          type="submit"
+          onClick={addToCart}
         >
           <svg
             className="w-5 h-5 -ms-2 me-2"
@@ -96,7 +109,7 @@ const Add = ({ variantStockNumber }: { variantStockNumber: number }) => {
             />
           </svg>
           Add to cart
-        </a>
+        </button>
       </div>
     </div>
   );

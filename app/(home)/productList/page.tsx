@@ -5,9 +5,14 @@ import LoadingSpinner from "@/components/loading/Loading";
 import ProductList from "@/components/productList/ProductList";
 import SearchBar from "@/components/productSearch/SearchProduct";
 import { wixClientServer } from "@/lib/wixClientServer";
+import { Metadata } from "next";
 import { Suspense } from "react";
 
 const ALL_PRODUCTS_ID = "00000000-000000-000000-000000000001";
+
+export const metadata: Metadata = {
+  title: "Productlist",
+};
 
 const ProductListPage = async ({
   searchParams,
@@ -27,10 +32,11 @@ const ProductListPage = async ({
         <FilterSidebar />
       </div>
       {/* ============right section listing all products=========== */}
-      <div>
+      <div className="w-full">
+        {/* top bar in product list */}
         <div className="mb-4 flex items-center justify-between space-y-4 sm:flex sm:space-y-0 md:mb-8">
           {/* Filter Top  bar  */}
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl capitalize">
             {categories?.collection?.name}
           </h2>
 

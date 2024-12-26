@@ -12,7 +12,6 @@ const navLinks = [
 
 const Navbar = async ({ rightMenu }: { rightMenu: boolean }) => {
   const session = await auth();
-  console.log(session, "session");
 
   return (
     <nav className="bg-white dark:bg-gray-800 antialiased">

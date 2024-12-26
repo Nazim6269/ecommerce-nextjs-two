@@ -17,7 +17,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ecommerce Two",
+  title: {
+    default: "E-commerce Two",
+    template: "%s - Ecommerce Two",
+  },
   description: "A real world e-commerce site",
 };
 

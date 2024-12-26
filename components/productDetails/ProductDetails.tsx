@@ -57,6 +57,7 @@ const ProductDetails: React.FC<{ product: Product }> = ({ product }) => {
               variants={variants}
               productId={product._id}
               productOptions={product.productOptions}
+              product={product}
             />
 
             <hr className="my-6 md:my-8 border-gray-200 dark:border-gray-800" />

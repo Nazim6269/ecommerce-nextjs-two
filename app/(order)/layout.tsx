@@ -15,8 +15,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ecommerce Two",
+  title: {
+    default: "E-commerce two",
+    template: "%s - E-commerce two",
+  },
   description: "A real world e-commerce site",
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
